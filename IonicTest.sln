@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IonicTest", "IonicTest.csproj", "{6B55C825-C233-4E21-97A7-9564FD4F42DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B55C825-C233-4E21-97A7-9564FD4F42DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B55C825-C233-4E21-97A7-9564FD4F42DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B55C825-C233-4E21-97A7-9564FD4F42DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B55C825-C233-4E21-97A7-9564FD4F42DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E47FF05-4ECE-4E1A-80FC-AE6C733B6C0A}
+	EndGlobalSection
+EndGlobal
