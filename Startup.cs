@@ -50,13 +50,14 @@ namespace IonicTest
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors("AllowSpecificOrigin");
+           
             app.UseSwagger();
             app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ionic test API V1"); });
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors("AllowSpecificOrigin");
 
             app.UseAuthorization();
 
