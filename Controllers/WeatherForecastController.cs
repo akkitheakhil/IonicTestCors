@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -9,6 +10,7 @@ namespace IonicTest.Controllers
 {
     [ApiController]
     [Route("/sample")]
+
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -24,6 +26,7 @@ namespace IonicTest.Controllers
 
         }
 
+        [EnableCors("AllowSpecificOrigin")]
         [HttpGet("test")]
         public IEnumerable<WeatherForecast> Get()
         {
