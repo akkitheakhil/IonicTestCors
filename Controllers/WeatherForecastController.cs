@@ -26,7 +26,7 @@ namespace IonicTest.Controllers
 
         }
 
-        [EnableCors("AllowSpecificOrigin")]
+       // [EnableCors("AllowSpecificOrigin")]
         [HttpGet("test")]
         public IEnumerable<WeatherForecast> Get()
         {
