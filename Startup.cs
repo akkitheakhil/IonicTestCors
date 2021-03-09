@@ -67,7 +67,7 @@ namespace IonicTest
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseCors("AllowSpecificOrigin");
+            app.UseCors();
             /*app.UseCors(builder => builder.WithOrigins("https://localhost:44306")
                               .AllowAnyMethod()
                               .WithHeaders("authorization", "accept", "content-type", "AllowSpecificOrigin"));*/
