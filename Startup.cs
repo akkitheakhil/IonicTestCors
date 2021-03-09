@@ -28,10 +28,10 @@ namespace IonicTest
             services.AddControllers();
             services.AddSwaggerGen();
             // app settings configuration.
-            services.AddCors(options =>
+           /* services.AddCors(options =>
             {
                 // this defines a CORS policy called "default"
-                options.AddPolicy("AllowSpecificOrigin", policy =>
+                *//*options.AddPolicy("AllowSpecificOrigin", policy =>
                 {
                     var corsUrlSection = Configuration.GetSection("AllowedOrigins");
                     var corsUrls = corsUrlSection.Get<string[]>();
@@ -39,7 +39,14 @@ namespace IonicTest
                         .AllowAnyHeader()
                         .WithExposedHeaders("X-Pagination") // add any customer header if we are planning to send any 
                         .AllowAnyMethod();
-                });
+                });*//*
+            
+
+            });*/
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                builder => builder.WithOrigins("capacitor://account.hrblock.com", "https://www.account.hrblock.com"));
             });
         }
 
@@ -58,6 +65,10 @@ namespace IonicTest
 
             app.UseRouting();
             app.UseCors("AllowSpecificOrigin");
+            /*app.UseCors(builder => builder.WithOrigins("https://localhost:44306")
+                              .AllowAnyMethod()
+                              .WithHeaders("authorization", "accept", "content-type", "AllowSpecificOrigin"));*/
+
 
             app.UseAuthorization();
 
