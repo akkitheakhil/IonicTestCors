@@ -43,11 +43,14 @@ namespace IonicTest
             
 
             });*/
-            services.AddCors(options =>
+      /*      services.AddCors(options =>
             {
                 options.AddPolicy("AllowSpecificOrigin",
                 builder => builder.WithOrigins("capacitor://account.hrblock.com", "https://www.account.hrblock.com"));
-            });
+            });*/
+            services.AddCors(options => options.AddDefaultPolicy(
+           builder => builder.WithOrigins("https://www.account.hrblock.com"))
+       );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,7 +67,7 @@ namespace IonicTest
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseCors("AllowSpecificOrigin");
+            app.UseCors();
             /*app.UseCors(builder => builder.WithOrigins("https://localhost:44306")
                               .AllowAnyMethod()
                               .WithHeaders("authorization", "accept", "content-type", "AllowSpecificOrigin"));*/
